@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
+import { Routes, Route } from 'react-router-dom';
+import Landing from './pages/Landing';
+import { Navbar } from './components/navbar';
+ // adjust the path based on your project structure
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>rahul</h1>
+    <Navbar/>
+      
+      <Routes>
+        <Route path="/" element={<Landing/>} />
+        {/* Add other routes here as needed */}
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
